@@ -13,4 +13,8 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs
       - run: pip install mkdocs-material
+      - name: Configure Git
+        run: |
+          git config --global user.name "tracy626"
+          git config --global user.email "tracy_sphere@live.cn"
       - run: mkdocs gh-deploy --force
